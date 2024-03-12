@@ -37,7 +37,7 @@
 .smalls .section15{margin-left: 0;width: var(--containerwidthsm);--containerwidthsm:32vw;height: 49%;}
 .smalls .section15 .item{padding:0 5vw ;width: var(--containerwidthsm) !important;align-items: start !important;text-align: start!important;}
 .smalls .section15 .item h1{font-size: 30px !important;margin-bottom: 10px !important;line-height: 30px !important;margin-top: 0 !important;}
-.smalls .section15 .item h2{max-width: 600px;font-size: 13px !important;line-height: 15px !important;margin-bottom: 20px;}
+.smalls .section15 .item h2{max-width: 800px !important;width: 80% !important;font-size: 13px !important;line-height: 15px !important;margin-bottom: 20px;}
 .smalls .section15 .item .group .btn{height: 45px !important;padding:0 20px !important;gap: 20px;font-size: 10px !important;}
 
 
