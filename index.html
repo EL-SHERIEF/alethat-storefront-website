@@ -253,6 +253,8 @@
         <ul class="dots">
         </ul>
       </div>
+
+      <!--
   <div class="smalls">
     <div class="section15">
       <div class="list">
@@ -373,16 +375,124 @@
       </ul>
     </div>
   </div>
-      
+      -->
     </div>
+<style>
 
+.Section5{  margin-top: 150px;position: relative;z-index: 1;padding: 0;display: flex;flex-direction: column;align-items: start;width: 95%;margin-left: 2.5%;}
+ .works-wrapper{width: 100%;overflow-x: hidden;border-radius: 20px;}
+.works { margin-left: 0; width:fit-content;display:flex;flex-wrap:nowrap;gap: 20px;}
+    
+    .works .box{
+        position: relative;
+   width: 400px; height: fit-content;gap:15px;display: flex;flex-direction: column;justify-content: start;align-items: center;flex-wrap: nowrap;flex-shrink:0}
+       
+        .works .box .gallery_img{border-radius: 20px;overflow: hidden; width: 100%;height: 500px;object-fit: cover;}
+        
+        .works .box .context{ margin-bottom: 40px;width: 90%; display: flex;flex-direction: column;justify-content: start;align-items: center;gap: 10px;}
+    .works .box h1{max-width: 100%;font-size: 17px;line-height: 40px;}
+    .works .box h3{font-size: 15px;line-height: 19px;max-width: 100%;text-align: center;}
+   
+    .works .box.last h1{width: 80%;font-size: 30px;line-height: 10vw;text-align: start;}
+    .works .box.last h2{margin-top: -2vw;width: 80%;font-size: 1vw;line-height: normal;text-align: start;}
+  
+    .works .box:last-child{margin-inline-end: 5vw;}
+    .works .box:first-child{width: 600px;color: black;display: flex;flex-direction: column;justify-content: start;align-items: center;text-align: start;}
+
+
+</style>
+
+
+    <section class="Section5">
+      <div class="works-wrapper">
+        <div class="works">
+          <div class="box last show">
+            <h1>AND MANY MORE</h1>
+            <h2>[ STORIES ] THAT MAY INSPIRE YOU TO DO BETTER.</h2>
+          </div>
+          <div class="box">
+            <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            <div class="context">
+          
+              <h1>Hayat water co</h1>
+              <h3></h3>
+            </div>
+          </div>
+          <div class="box">
+            <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            <div class="context">
+          
+              <h1>Hayat water co</h1>
+              <h3></h3>
+            </div>
+          </div>
+          <div class="box">
+            <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            <div class="context">
+          
+              <h1>Hayat water co</h1>
+              <h3></h3>
+            </div>
+          </div>
+          <div class="box">
+            <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            <div class="context">
+          
+              <h1>Hayat water co</h1>
+              <h3></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    
 
     
     <script src="https://cdn.tailwindcss.com"></script>
 
 
+    <script>
+      
+const works = document.querySelector(".works");
+console.log(works.offsetWidth)
+function getScrollAmount() {
+	let worksWidth = works.scrollWidth;
+	return -(worksWidth - window.innerWidth);
+}
+const tween = gsap.to(works, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
+});
+ScrollTrigger.create({
+	trigger:".works-wrapper",
+	start:"30% 30%",
+	end: () => `+=${getScrollAmount() * -1}` ,
+	pin:true,
+	animation:tween,
+	scrub:1,
+  markers:true,
+	invalidateOnRefresh:true,
+
+})
+
+
+    </script>
 <script>
-  
   function initializeSlider(sliderContainer) {
     let slider = sliderContainer.querySelector('.list');
     let items = sliderContainer.querySelectorAll('.list .item');
