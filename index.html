@@ -8,13 +8,13 @@
     <title>Alethar</title>
 </head>
 <body>
-    <header class="bg-white w-full">
+    <header class="bg-white w-full fixed top-0 left-0 bg-white z-10 slightly-nav-shadow">
          
         <nav class="mx-auto flex w-[90%] items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img class="h-14 w-auto" src="./ASSETS/logo.png" alt="">
+              <span class="sr-only">Alethar</span>
+              <img class="h-7 w-auto" src="./ASSETS/logo.svg" alt="">
             </a>
           </div>
           <div class="flex lg:hidden menusvg">
@@ -33,13 +33,7 @@
                 </svg>
               </a>
     <style>
-    .dropdwnpanel {
-        display: none;
-    }
-    
-    .Menu {
-        display: none;
-    }
+
  
     </style>
               <div class="dropdwnpanel absolute -left-8 top-full z-10 mt-3 w-screen max-w-md rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
@@ -254,8 +248,8 @@
         </ul>
       </div>
 
-      <!--
-  <div class="smalls">
+   
+ <!-- <div class="smalls">
     <div class="section15">
       <div class="list">
 
@@ -374,31 +368,31 @@
       <ul class="dots">
       </ul>
     </div>
-  </div>
-      -->
+  </div>-->
+
     </div>
 <style>
-
-.Section5{  margin-top: 150px;position: relative;z-index: 1;padding: 0;display: flex;flex-direction: column;align-items: start;width: 95%;margin-left: 2.5%;}
+.slightly-nav-shadow{box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.141);}
+.Section5{margin-top: 130px;position: relative;z-index: 1;padding: 0;display: flex;flex-direction: column;align-items: start;width: 92%;margin-left: 4%;}
  .works-wrapper{width: 100%;overflow-x: hidden;border-radius: 20px;}
 .works { margin-left: 0; width:fit-content;display:flex;flex-wrap:nowrap;gap: 20px;}
     
     .works .box{
         position: relative;
-   width: 400px; height: fit-content;gap:15px;display: flex;flex-direction: column;justify-content: start;align-items: center;flex-wrap: nowrap;flex-shrink:0}
-       
-        .works .box .gallery_img{border-radius: 20px;overflow: hidden; width: 100%;height: 500px;object-fit: cover;}
-        
+   width: 350px; height: fit-content;gap:15px;display: flex;flex-direction: column;justify-content: start;align-items: center;flex-wrap: nowrap;flex-shrink:0}
+   .works .box .imgwarapper{width: 100%;height:400px;border-radius: 20px;overflow: hidden;}
+        .works .box .gallery_img{ width: 100%;height: 100%;object-fit: cover;transition:500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}
+        .works .box:hover .gallery_img{scale: 120%;filter: brightness(50%);} 
         .works .box .context{ margin-bottom: 40px;width: 90%; display: flex;flex-direction: column;justify-content: start;align-items: center;gap: 10px;}
     .works .box h1{max-width: 100%;font-size: 17px;line-height: 40px;}
     .works .box h3{font-size: 15px;line-height: 19px;max-width: 100%;text-align: center;}
    
-    .works .box.last h1{width: 80%;font-size: 30px;line-height: 10vw;text-align: start;}
-    .works .box.last h2{margin-top: -2vw;width: 80%;font-size: 1vw;line-height: normal;text-align: start;}
-  
-    .works .box:last-child{margin-inline-end: 5vw;}
-    .works .box:first-child{width: 600px;color: black;display: flex;flex-direction: column;justify-content: start;align-items: center;text-align: start;}
 
+    .works .box:last-child{margin-inline-end: 18vh;}
+    .works .box:first-child{width: 500px;color: black;display: flex;flex-direction: column;justify-content: start;align-items:start;text-align: start;gap:50px 0px;}
+    .works .box:first-child h1{width: 80%;font-size: 5.5vw;line-height: 4vw;text-align: start;margin: 0 !important;letter-spacing: -2px;font-weight: 500;}
+    .works .box:first-child h2{width: 80%;font-size: 15px;line-height: normal;text-align: start;position: relative;display: flex;margin-bottom: 20px  ;}
+    .works .box:first-child h2::before{content: '.';width: 4px;height: 20px;background-color: black;margin-inline-end: 15px;height: 100%;}
 
 </style>
 
@@ -407,38 +401,57 @@
       <div class="works-wrapper">
         <div class="works">
           <div class="box last show">
-            <h1>AND MANY MORE</h1>
-            <h2>[ STORIES ] THAT MAY INSPIRE YOU TO DO BETTER.</h2>
+            <h1>Categories</h1>
+            <h2>Scroll through our Categories.</h2>
+              <a href="#sectors" class="btn filled black">All Categories<img src="./ASSETS/arrow.svg"/></a>
           </div>
           <div class="box">
-            <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            <div class="imgwarapper">
+              <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            </div>
             <div class="context">
           
-              <h1>Hayat water co</h1>
+              <h1>Nuzuki bags</h1>
               <h3></h3>
             </div>
           </div>
           <div class="box">
-            <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            <div class="imgwarapper">
+              <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            </div>
             <div class="context">
           
-              <h1>Hayat water co</h1>
+              <h1>Nuzuki bags</h1>
               <h3></h3>
             </div>
           </div>
           <div class="box">
-            <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            <div class="imgwarapper">
+              <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            </div>
             <div class="context">
           
-              <h1>Hayat water co</h1>
+              <h1>Nuzuki bags</h1>
               <h3></h3>
             </div>
           </div>
           <div class="box">
-            <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            <div class="imgwarapper">
+              <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            </div>
             <div class="context">
           
-              <h1>Hayat water co</h1>
+              <h1>Nuzuki bags</h1>
+              <h3></h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgwarapper">
+              <img src="./ASSETS/slider/backpacks.webp" class="gallery_img">
+            </div>
+            <div class="context">
+          
+              <h1>Nuzuki bags</h1>
               <h3></h3>
             </div>
           </div>
@@ -446,16 +459,6 @@
       </div>
     
     </section>
-
-
-
-
-
-
-
-
-
-
     <script src="js/jquery.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
@@ -480,12 +483,32 @@ const tween = gsap.to(works, {
 });
 ScrollTrigger.create({
 	trigger:".works-wrapper",
-	start:"30% 30%",
+	start:"30% 45%",
 	end: () => `+=${getScrollAmount() * -1}` ,
 	pin:true,
 	animation:tween,
 	scrub:1,
-  markers:true,
+
+	invalidateOnRefresh:true,
+
+})
+const firstchild = document.querySelector(".works .box:first-child");
+const tween2 = gsap.to(firstchild, {
+	x: 950,
+  opacity: -4,
+//  filter:'blur(80px)',
+	duration: 3,
+
+	ease: "none",
+});
+ScrollTrigger.create({
+	trigger:".works-wrapper",
+	start:"30% 45%",
+	end: () => `+=${getScrollAmount() * -1}` ,
+	pin:true,
+	animation:tween2,
+	scrub:1,
+
 	invalidateOnRefresh:true,
 
 })
